@@ -54,32 +54,13 @@ img{display:block;max-width:100%}
 .about__list li{margin-bottom: 8px; padding-left: 20px; position: relative;}
 .about__list li::before{content: '•'; position: absolute; left: 0; font-weight: bold;}
 /* Musik Section Styles */
-.music-section-wrapper {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-}
-/* Neues Style für das zentrierte Logo */
-.spotify-centered-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-}
-
-.spotify-centered-img {
-    width: 150px; /* Standardgröße ca. 300px */
-    height: auto;
-    opacity: 0.9;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.spotify-centered-link:hover .spotify-centered-img {
-    opacity: 1;
-    transform: scale(1.05); /* Leichter Zoom beim Hover */
-}
+.discography-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:32px}
+.album-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:10px;padding:20px;text-align:center;transition:all .3s ease;cursor:pointer}
+.album-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1);border-color:rgba(0,0,0,.15)}
+.album-card a{text-decoration:none;color:inherit;display:block}
+.album-card__img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;margin-bottom:16px;display:block;background:#f0f0f0}
+.album-card h3{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;color:#0f0f0f;margin-bottom:6px;letter-spacing:.02em}
+.album-card p{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;color:#999;letter-spacing:.12em;text-transform:uppercase}
 
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px; max-width: 800px; margin: 0 auto;}
 .contact-block__label{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#999;margin-bottom:16px}
@@ -250,12 +231,28 @@ text-align: center !important;
 <div class="divider"></div>
 <section class="section" id="music">
 <h2 class="section__heading fade-in">Musik</h2>
-<!-- Wrapper für zentriertes Spotify Bild -->
-<div class="music-section-wrapper">
-    <!-- Nur ein Link, zentriert und verkleinert -->
-    <a href="https://open.spotify.com/intl-de/artist/72wQywwpFXTLZjKUsk6uX6?si=uJVMRSLnSWG6ldbMPIIbJg" target="_blank" class="spotify-centered-link">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Auf Spotify anhören" class="spotify-centered-img">
+<div class="discography-grid">
+  <div class="album-card fade-in">
+    <a href="https://open.spotify.com/intl-de/album/4M0fErepqj1auMGj1kNIXC" target="_blank">
+      <img class="album-card__img" src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b6e1ea859a34dcd642adb381" alt="Caribe Pacifico" loading="lazy">
+      <h3>Caribe Pacifico</h3>
+      <p>Spotify öffnen</p>
     </a>
+  </div>
+  <div class="album-card fade-in">
+    <a href="https://open.spotify.com/intl-de/album/0VF6hUuloZk3OhTCKhjm97" target="_blank">
+      <img class="album-card__img" src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021500424dd1aa69f3cb832dc9" alt="Jason Fabus (US)" loading="lazy">
+      <h3>Jason Fabus (US)</h3>
+      <p>Spotify öffnen</p>
+    </a>
+  </div>
+  <div class="album-card fade-in">
+    <a href="https://open.spotify.com/intl-de/album/7DYfnf4NgABpJeeGsCTJ0a" target="_blank">
+      <img class="album-card__img" src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026d44a1d1f41ef0d574a7d79a" alt="Matthew Liebeck Quartett" loading="lazy">
+      <h3>Matthew Liebeck Quartett</h3>
+      <p>Spotify öffnen</p>
+    </a>
+  </div>
 </div>
 </section>
 <div class="divider"></div>
