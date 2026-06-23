@@ -3,149 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Felix Mross – Jazzpianist Berlin</title>
-<meta name="description" content="Felix Mross – Jazzpianist für Events in Berlin. Buchung, Musik und Informationen.">
+<title>Felix Mross - Jazzpianist Berlin</title>
+<meta name="description" content="Felix Mross - Jazzpianist für Events in Berlin. Buchung, Musik und Informationen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:#e8e6e3;background:#0a0a0a;line-height:1.7;overflow-x:hidden}
+body{font-family:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;color:#0f0f0f;background:#fff;line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
-
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;height:64px;background:rgba(10,10,10,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav__list{display:flex;align-items:center;gap:36px;list-style:none}
-.nav__link{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(232,230,227,.7);padding:8px 0;transition:color .3s ease;position:relative}
-.nav__link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:#c9a84c;transition:width .4s cubic-bezier(.22,1,.36,1)}
-.nav__link:hover{color:#e8e6e3}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;align-items:center;height:60px;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav__list{display:flex;align-items:center;gap:32px;list-style:none}
+.nav__link{font-family:'Inter',sans-serif;font-size:13px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#0f0f0f;padding:8px 0;transition:opacity .2s ease;position:relative}
+.nav__link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:#0f0f0f;transition:width .3s ease}
 .nav__link:hover::after{width:100%}
-.nav__social{position:absolute;right:28px;top:50%;transform:translateY(-50%);display:flex;gap:12px}
-.nav__social .social__link{width:34px;height:34px;border-color:rgba(255,255,255,.1);transition:all .3s ease}
-.nav__social .social__link:hover{background:#c9a84c;border-color:#c9a84c;color:#0a0a0a}
+.nav__social{position:absolute;right:20px;top:50%;transform:translateY(-50%);display:flex;gap:10px}
+.nav__social .social__link{width:32px;height:32px}
 .nav__social .social__link svg{width:14px;height:14px}
 
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:64px}
-.hero__bg{position:absolute;inset:0;z-index:0;background-image:url('Bilder/Hero.png');background-size:cover;background-position:center;background-repeat:no-repeat}
-.hero__bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.7) 100%)}
-.hero__bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 0%,rgba(10,10,10,.4) 100%);z-index:1}
-.hero__content{position:relative;z-index:2;text-align:center;padding:20px}
-.hero__eyebrow{font-family:'Inter',sans-serif;font-size:12px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,168,76,.8);margin-bottom:16px}
-.hero__title{font-family:'Playfair Display',serif;font-size:clamp(40px,7vw,96px);font-weight:400;letter-spacing:.04em;color:#e8e6e3;margin-bottom:8px;line-height:1.05}
-.hero__title em{font-style:italic;font-weight:300}
-.hero__subtitle{font-family:'Inter',sans-serif;font-size:clamp(13px,1.6vw,16px);font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:rgba(232,230,227,.6);margin-bottom:32px}
-.hero__btn{display:inline-block;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#0a0a0a;background:#c9a84c;padding:16px 40px;transition:all .4s cubic-bezier(.22,1,.36,1);border:none;cursor:pointer;position:relative;overflow:hidden}
-.hero__btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .6s cubic-bezier(.22,1,.36,1)}
-.hero__btn:hover{background:#e8e6e3;transform:translateY(-1px)}
-.hero__btn:hover::before{left:100%}
-.hero__scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(232,230,227,.4);font-size:9px;letter-spacing:.2em;text-transform:uppercase;animation:scrollPulse 2.5s ease-in-out infinite}
-.hero__scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,rgba(232,230,227,.4),transparent)}
-@keyframes scrollPulse{0%,100%{opacity:1}50%{opacity:.3}}
-
-.section{padding:100px 24px;max-width:1200px;margin:0 auto}
-.section__heading{font-family:'Playfair Display',serif;font-size:clamp(28px,3.2vw,38px);font-weight:400;letter-spacing:.02em;color:#e8e6e3;margin-bottom:12px;text-align:center}
-.section__subline{width:40px;height:1px;background:rgba(201,168,76,.6);margin:0 auto 48px}
-
-.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-.video-grid__item{position:relative;padding-bottom:56.25%;overflow:hidden;background:#141414;border-radius:4px;outline:1px solid rgba(255,255,255,.04);outline-offset:-1px;transition:outline-color .4s ease,transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s ease}
-.video-grid__item:hover{outline-color:rgba(201,168,76,.3);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:60px}
+.hero__bg{position:absolute;inset:0;z-index:0}
+/* ÄNDERUNG: Hintergrundbild auf Hero.png gesetzt */
+.hero__bg {
+    background-image: url('Bilder/Hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero__bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.15)}
+.hero__content{position:relative;z-index:1;text-align:center;padding:20px}
+.hero__title{font-family:'Inter',sans-serif;font-size:clamp(28px,6vw,72px);font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:10px;line-height:1.1}
+.hero__subtitle{font-family:'Inter',sans-serif;font-size:clamp(14px,2vw,18px);font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:24px}
+.hero__btn{display:inline-block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#0f0f0f;background:#fff;padding:14px 36px;transition:all .3s ease;border:none;cursor:pointer}
+.hero__btn:hover{background:#0f0f0f;color:#fff}
+.btn-dark{display:inline-block;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#777;padding:14px 36px;transition:all .3s ease;border:none;cursor:pointer}
+.btn-dark:hover{transform:scale(1.05)}
+.section{padding:70px 24px;max-width:1200px;margin:0 auto}
+.section__heading{font-family:'DM Sans',sans-serif;font-size:clamp(24px,3vw,31px);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#0f0f0f;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,.1);text-align: center;}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.video-grid__item{position:relative;padding-bottom:56.25%;overflow:hidden;background:#000}
 .video-grid__item iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 .video-thumb{position:absolute;top:0;left:0;width:100%;height:100%;display:block;text-decoration:none}
-.video-thumb__img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
-.video-thumb:hover .video-thumb__img{transform:scale(1.08)}
-.video-thumb__play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:44px;background:rgba(201,168,76,.9);border-radius:6px;display:flex;align-items:center;justify-content:center;transition:transform .3s ease,background .3s ease;pointer-events:none}
-.video-thumb:hover .video-thumb__play{transform:translate(-50%,-50%) scale(1.12);background:#c9a84c}
-.video-thumb__play svg{display:block;width:22px;height:22px;fill:#0a0a0a}
-
-.about__text{font-family:'Inter',sans-serif;font-size:15px;font-weight:400;line-height:1.8;color:rgba(232,230,227,.75);max-width:720px;margin:0 auto}
-.about__text strong{color:#e8e6e3;font-weight:500}
-.about__list{list-style:none;margin:24px 0;max-width:720px}
-.about__list li{margin-bottom:10px;padding-left:24px;position:relative;color:rgba(232,230,227,.75)}
-.about__list li::before{content:'◆';position:absolute;left:0;font-size:8px;color:#c9a84c;top:4px}
-
-.discography-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-top:0}
-.album-card{background:#111;border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:24px;text-align:center;transition:all .4s cubic-bezier(.22,1,.36,1);cursor:pointer}
-.album-card:hover{transform:translateY(-6px);border-color:rgba(201,168,76,.3);box-shadow:0 24px 64px rgba(0,0,0,.5),0 0 0 1px rgba(201,168,76,.1)}
+.video-thumb__img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.video-thumb:hover .video-thumb__img{transform:scale(1.05)}
+.video-thumb__play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:40px;background:rgba(0,0,0,.7);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:transform .2s ease;pointer-events:none}
+.video-thumb:hover .video-thumb__play{transform:translate(-50%,-50%) scale(1.1)}
+.video-thumb__play svg{display:block;width:20px;height:20px;fill:#fff}
+.about__text{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;line-height:1.7;color:#333;max-width:720px;margin: 0 auto;}
+.about__list{list-style:none; margin: 20px 0; max-width: 720px;}
+.about__list li{margin-bottom: 8px; padding-left: 20px; position: relative;}
+.about__list li::before{content: '•'; position: absolute; left: 0; font-weight: bold;}
+/* Musik Section Styles */
+.discography-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:32px}
+.album-card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:10px;padding:20px;text-align:center;transition:all .3s ease;cursor:pointer}
+.album-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1);border-color:rgba(0,0,0,.15)}
 .album-card a{text-decoration:none;color:inherit;display:block}
-.album-card__img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;margin-bottom:18px;display:block;background:#1a1a1a;transition:transform .4s ease}
-.album-card:hover .album-card__img{transform:scale(1.02)}
-.album-card h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#e8e6e3;margin-bottom:6px;letter-spacing:.01em}
-.album-card p{font-family:'Inter',sans-serif;font-size:10px;font-weight:400;color:rgba(232,230,227,.4);letter-spacing:.18em;text-transform:uppercase}
+.album-card__img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;margin-bottom:16px;display:block;background:#f0f0f0}
+.album-card h3{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;color:#0f0f0f;margin-bottom:6px;letter-spacing:.02em}
+.album-card p{font-family:'Inter',sans-serif;font-size:11px;font-weight:400;color:#999;letter-spacing:.12em;text-transform:uppercase}
 
-.film__text{font-family:'Inter',sans-serif;font-size:15px;font-weight:400;line-height:1.8;color:rgba(232,230,227,.75);max-width:720px;margin:0 auto}
+.film__text{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;line-height:1.7;color:#333;max-width:720px;margin:0 auto}
 .film__text p{margin-bottom:16px}
-.film__text em{font-style:italic;color:#e8e6e3}
-.film-poster{width:64px;border-radius:3px;margin:4px 20px 10px 0;box-shadow:0 4px 16px rgba(0,0,0,.5);float:left;outline:1px solid rgba(255,255,255,.06)}
-
-.session__text{font-family:'Inter',sans-serif;font-size:15px;font-weight:400;line-height:1.8;color:rgba(232,230,227,.75);max-width:720px;margin:0 auto}
-.session__track{display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:12px 20px;border:1px solid rgba(255,255,255,.06);border-radius:6px;text-decoration:none;color:inherit;transition:all .3s ease;background:rgba(255,255,255,.02)}
-.session__track:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25);transform:translateX(4px)}
-.session__track-img{width:44px;height:44px;border-radius:3px;object-fit:cover;display:block}
-.session__track span{font-family:'Inter',sans-serif;font-size:13px;color:rgba(232,230,227,.7);font-weight:400}
-
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:700px;margin:0 auto}
-.contact-block{background:#111;border:1px solid rgba(255,255,255,.06);border-radius:6px;padding:28px 32px;text-align:center;transition:border-color .3s ease}
-.contact-block:hover{border-color:rgba(201,168,76,.2)}
-.contact-block__label{font-family:'Inter',sans-serif;font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,230,227,.35);margin-bottom:12px}
-.contact-block__name{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;color:#e8e6e3;margin-bottom:8px}
-.contact-block__email{font-family:'Inter',sans-serif;font-size:14px;font-weight:400;color:rgba(232,230,227,.65);margin-bottom:4px}
-.contact-block__email a{color:rgba(232,230,227,.65);border-bottom:1px solid rgba(201,168,76,.2);transition:color .3s ease,border-color .3s ease}
-.contact-block__email a:hover{color:#c9a84c;border-color:#c9a84c}
-.contact-block__link{font-family:'Inter',sans-serif;font-size:13px;font-weight:400;color:rgba(232,230,227,.55);border-bottom:1px solid rgba(201,168,76,.15);transition:color .3s ease,border-color .3s ease}
-.contact-block__link:hover{color:#c9a84c;border-color:#c9a84c}
-
-.social{display:flex;gap:16px;margin-top:36px;justify-content:center}
-.social__link{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.1);border-radius:50%;transition:all .35s ease;overflow:hidden;color:rgba(232,230,227,.5)}
-.social__link:hover{background:#c9a84c;border-color:#c9a84c;color:#0a0a0a;transform:translateY(-2px)}
+.film__text em{font-style:italic}
+.film-poster{width:60px;border-radius:4px;margin:4px 16px 8px 0;box-shadow:0 2px 8px rgba(0,0,0,.12);float:left}
+.session__text{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;line-height:1.7;color:#333;max-width:720px;margin:0 auto}
+.session__track{display:inline-flex;align-items:center;gap:10px;margin-top:20px;text-decoration:none;color:inherit;transition:opacity .2s ease}
+.session__track:hover{opacity:.7}
+.session__track-img{width:40px;height:40px;border-radius:4px;object-fit:cover;display:block}
+.session__track span{font-family:'Inter',sans-serif;font-size:13px;color:#555}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px; max-width: 800px; margin: 0 auto;}
+.contact-block__label{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#999;margin-bottom:16px}
+.contact-block__name{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;color:#0f0f0f;margin-bottom:8px}
+.contact-block__email{font-family:'Inter',sans-serif;font-size:14px;font-weight:400;color:#555;margin-bottom:4px}
+.contact-block__email a{color:#555;border-bottom:1px solid rgba(0,0,0,.2);transition:border-color .2s ease}
+.contact-block__email a:hover{border-color:#0f0f0f}
+.contact-block__link{font-family:'Inter',sans-serif;font-size:13px;font-weight:400;color:#555;border-bottom:1px solid rgba(0,0,0,.2)}
+.contact-block__link:hover{border-color:#0f0f0f}
+.social{display:flex;gap:24px;margin-top:32px;justify-content: center;}
+.social__link{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(0,0,0,.15);border-radius:50%;transition:all .2s ease; overflow: hidden;}
+.social__link:hover{background:#0f0f0f;border-color:#0f0f0f;color:#fff}
 .social__link svg{width:16px;height:16px;fill:currentColor}
-.social__link img{width:100%;height:100%;object-fit:cover}
-
-.footer{padding:32px 24px;text-align:center;border-top:1px solid rgba(255,255,255,.04)}
-.footer__credit{font-family:'Inter',sans-serif;font-size:11px;font-weight:300;color:rgba(232,230,227,.3);line-height:1.8;letter-spacing:.05em}
-.footer__credit a{color:rgba(232,230,227,.4);border-bottom:1px solid rgba(201,168,76,.15)}
-.footer__credit a:hover{color:#c9a84c;border-color:#c9a84c}
-
-.divider{width:100%;height:1px;background:rgba(255,255,255,.04);max-width:1200px;margin:0 auto}
-
-.fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.social__link img { width: 100%; height: 100%; object-fit: cover; }
+.footer{padding:24px 24px;text-align:center;border-top:1px solid rgba(0,0,0,.08)}
+.footer__credit{font-family:'Inter',sans-serif;font-size:12px;font-weight:300;color:#888;line-height:1.8}
+.footer__credit a{color:#555;border-bottom:1px solid rgba(0,0,0,.15)}
+.footer__credit a:hover{border-color:#0f0f0f}
+.divider{width:100%;height:1px;background:rgba(0,0,0,.08);max-width:1200px;margin:0 auto}
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
-.btn-dark{display:inline-block;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#e8e6e3;background:transparent;padding:14px 36px;transition:all .4s cubic-bezier(.22,1,.36,1);border:1px solid rgba(232,230,227,.2);cursor:pointer}
-.btn-dark:hover{background:#c9a84c;border-color:#c9a84c;color:#0a0a0a}
 
-#newsletter{background:linear-gradient(to bottom,#0a0a0a,#0f0f0f)}
+/* Newsletter Specifics */
 #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedContent h4,
-#newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{text-align:center!important}
+#newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+text-align: center !important;
+}
 #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedContent p,
-#newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{text-align:center!important}
+#newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+text-align: center !important;
+}
 
+/* Accordion Styles for Legal Section */
 .legal-wrapper{max-width:800px;margin:0 auto;text-align:center}
-.legal-accordion{width:100%;border:none;background:transparent;padding:14px 0;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.15em;color:rgba(232,230,227,.3);cursor:pointer;border-bottom:1px solid rgba(255,255,255,.03);display:flex;justify-content:center;align-items:center;gap:8px;transition:color .3s ease}
-.legal-accordion:hover{color:rgba(232,230,227,.6)}
-.legal-accordion::after{content:'+';font-size:14px;font-weight:300;transition:transform .3s ease}
-.legal-accordion.active::after{transform:rotate(45deg)}
-.legal-content{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.22,1,.36,1);text-align:center;font-size:11px;color:rgba(232,230,227,.25);line-height:1.6}
-.legal-content p{margin-bottom:6px}
-.legal-content strong{color:rgba(232,230,227,.35)}
-
-.about-cta{text-align:center;margin-top:40px}
-
-.music-extra{font-family:'Inter',sans-serif;font-size:13px;font-weight:400;line-height:1.8;color:rgba(232,230,227,.5);max-width:720px;margin:36px auto 0;text-align:center}
+.legal-accordion{width:100%;border:none;background:transparent;padding:10px 0;font-family:'DM Sans',sans-serif;font-size:12px;color:#999;cursor:pointer;border-bottom:1px solid rgba(0,0,0,.04);display:flex;justify-content:center;align-items:center;transition:color .3s ease}
+.legal-accordion:hover{color:#666}
+.legal-content{max-height:0;overflow:hidden;transition:max-height .4s ease-out;text-align:center;font-size:11px;color:#aaa;line-height:1.4}
+.legal-content p{margin-bottom:4px}
+.legal-content strong{color:#888}
 
 @media(max-width:768px){
-.nav{height:auto;padding:12px 0;flex-wrap:wrap}
-.nav__list{gap:14px;flex-wrap:wrap;justify-content:center}
-.nav__link{font-size:10px;letter-spacing:.12em}
+.nav{height: auto; padding: 10px 0; flex-wrap: wrap;}
+.nav__list{gap:16px; flex-wrap: wrap; justify-content: center;}
+.nav__link{font-size:11px;letter-spacing:.1em}
 .nav__social{display:none}
-.section{padding:72px 20px}
+.section{padding:60px 20px}
 .video-grid{grid-template-columns:1fr}
-.contact-grid{grid-template-columns:1fr}
-.discography-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.contact-grid{grid-template-columns: 1fr;}
 }
 @media(max-width:480px){
-.nav__list{gap:8px}
-.nav__link{font-size:9px;letter-spacing:.08em}
+.nav__list{gap:10px}
+.nav__link{font-size:10px}
 }
 </style>
 </head>
@@ -156,7 +135,7 @@ img{display:block;max-width:100%}
 <li><a href="#about" class="nav__link">Über mich</a></li>
 <li><a href="#music" class="nav__link">Musik</a></li>
 <li><a href="#film" class="nav__link">Filmmusik</a></li>
-<li><a href="#session" class="nav__link">Session</a></li>
+<li><a href="#session" class="nav__link">Sessionmusiker</a></li>
 <li><a href="#newsletter" class="nav__link">Newsletter</a></li>
 <li><a href="#contact" class="nav__link">Kontakt</a></li>
 </ul>
@@ -173,35 +152,34 @@ img{display:block;max-width:100%}
 </div>
 </nav>
 <section class="hero" id="top">
-<div class="hero__bg"></div>
+<div class="hero__bg">
+<!-- Bild wurde entfernt, da es nun über CSS background-image gesteuert wird -->
+</div>
 <div class="hero__content">
-<p class="hero__eyebrow">Jazzpianist Berlin</p>
-<h1 class="hero__title">Felix Mross</h1>
-<p class="hero__subtitle">Klassisch ausgebildet &bull; Für Events & Buhne</p>
+<p class="hero__subtitle">Jazzpianist</p>
+<h1 class="hero__title">FELIX MROSS</h1>
+<!-- Button umbenannt und Link auf Video Section geändert -->
 <a href="#video" class="hero__btn">Hörprobe</a>
 </div>
-<div class="hero__scroll">
-<span>Scroll</span>
-<div class="hero__scroll-line"></div>
-</div>
 </section>
-<div class="divider"></div>
 <section class="section" id="video">
 <h2 class="section__heading fade-in">Video</h2>
-<div class="section__subline fade-in"></div>
 <div class="video-grid">
+<!-- Video 1 -->
 <div class="video-grid__item fade-in">
 <a href="https://www.youtube.com/watch?v=nYpzaYBvn3A" target="_blank" rel="noopener" class="video-thumb">
 <img src="https://img.youtube.com/vi/nYpzaYBvn3A/maxresdefault.jpg" alt="Video 1" loading="lazy" class="video-thumb__img" onerror="this.src='https://img.youtube.com/vi/nYpzaYBvn3A/hqdefault.jpg'">
 <div class="video-thumb__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
 </a>
 </div>
+<!-- Video 2 -->
 <div class="video-grid__item fade-in">
 <a href="https://www.youtube.com/watch?v=6QbJlynI8us" target="_blank" rel="noopener" class="video-thumb">
 <img src="https://img.youtube.com/vi/6QbJlynI8us/maxresdefault.jpg" alt="Video 2" loading="lazy" class="video-thumb__img" onerror="this.src='https://img.youtube.com/vi/6QbJlynI8us/hqdefault.jpg'">
 <div class="video-thumb__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
 </a>
 </div>
+<!-- Video 3 -->
 <div class="video-grid__item fade-in">
 <a href="https://www.youtube.com/watch?v=4Lb0rNwrkFQ" target="_blank" rel="noopener" class="video-thumb">
 <img src="https://img.youtube.com/vi/4Lb0rNwrkFQ/maxresdefault.jpg" alt="Video 3" loading="lazy" class="video-thumb__img" onerror="this.src='https://img.youtube.com/vi/4Lb0rNwrkFQ/hqdefault.jpg'">
@@ -213,11 +191,10 @@ img{display:block;max-width:100%}
 <div class="divider"></div>
 <section class="section" id="about">
 <h2 class="section__heading fade-in">Über mich</h2>
-<div class="section__subline fade-in"></div>
 <div class="about__text fade-in">
 <p><strong>Felix Mross – Ihr klassisch ausgebildeter Jazzpianist & Musiker für Events in Berlin</strong></p>
 <br>
-<p>Als klassisch ausgebildeter Pianist und Preisträger des <strong>WDR Klassikpreis</strong> (2004) sowie mehrfacher Bundespreisträger bei „Jugend musiziert" biete ich Ihnen höchste musikalische Qualität für Ihre Feierlichkeiten. Nach Stationen wie Konzerten in der <strong>Carnegie Hall New York</strong>, angesagten Berliner Jazz Clubs (u.a. Zig-Zag, B-Flat, Kulturfabrik Schlot...) und Mitwirkung im Landesjugendjazzorchester konzentriere ich mich heute auf meine große Leidenschaft: Den Jazz und lateinamerikanische Klänge.</p>
+<p>Als klassisch ausgebildeter Pianist und Preisträger des <strong>WDR Klassikpreis</strong> (2004) sowie mehrfacher Bundespreisträger bei „Jugend musiziert" biete ich Ihnen höchste musikalische Qualität für Ihre Feierlichkeiten. Nach Stationen wie Konzerten in der <strong>Carnegie Hall New York</strong> , angesagten Berliner Jazz Clubs (u.a. Zig-Zag, B-Flat, Kulturfabrik Schlot...) und Mitwirkung im Landesjugendjazzorchester konzentriere ich mich heute auf meine große Leidenschaft: Den Jazz und lateinamerikanische Klänge.</p>
 <br>
 <p>Ich bin als zuverlässiger Musiker für Events überwiegend in Berlin und im Hamburger Raum tätig. Ob Musik für eine Hochzeit in Berlin, als Pianist für Firmenfeiern oder private Feiern, ich passe mich flexibel an Ihren Wunsch und die Gegebenheiten vor Ort an. Genießen Sie geschmackvolles Solo-Piano zum Cocktailempfang, erweitern Sie das Programm mit Saxofon oder Gesang oder lassen Sie es mit einer vollen Band zu Funk-/Jazz und Latin-Vibes zum Tanzen eskalieren.</p>
 <ul class="about__list">
@@ -226,44 +203,42 @@ img{display:block;max-width:100%}
 <li><strong>Service:</strong> Persönliche Beratung & unverbindliches Angebot.</li>
 </ul>
 <p>Kontaktieren Sie mich für eine maßgeschneiderte musikalische Umrahmung Ihrer Veranstaltung.</p>
-<div class="about-cta">
+<div style="text-align:center;margin-top:32px">
 <a href="mailto:berlinmusicbooking@gmx.de" class="btn-dark">Jetzt anfragen</a>
 </div>
 </div>
 </section>
 <div class="divider"></div>
 <section class="section" id="music">
-<h2 class="section__heading fade-in">Musik</h2>
-<div class="section__subline fade-in"></div>
+<h2 class="section__heading fade-in">Musik (Auswahl)</h2>
 <div class="discography-grid">
-<div class="album-card fade-in">
-<a href="https://open.spotify.com/intl-de/album/4M0fErepqj1auMGj1kNIXC" target="_blank">
-<img class="album-card__img" src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b6e1ea859a34dcd642adb381" alt="Caribe Pacifico" loading="lazy">
-<h3>Caribe Pacifico</h3>
-<p>Spotify öffnen</p>
-</a>
-</div>
-<div class="album-card fade-in">
-<a href="https://open.spotify.com/intl-de/album/0VF6hUuloZk3OhTCKhjm97" target="_blank">
-<img class="album-card__img" src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021500424dd1aa69f3cb832dc9" alt="Jason Fabus (US)" loading="lazy">
-<h3>Jason Fabus (US)</h3>
-<p>Spotify öffnen</p>
-</a>
-</div>
-<div class="album-card fade-in">
-<a href="https://open.spotify.com/intl-de/album/7DYfnf4NgABpJeeGsCTJ0a" target="_blank">
-<img class="album-card__img" src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026d44a1d1f41ef0d574a7d79a" alt="Matthew Liebeck Quartett" loading="lazy">
-<h3>Matthew Liebeck Quartett</h3>
-<p>Spotify öffnen</p>
-</a>
-</div>
-</div>
-<p class="music-extra">darüber hinaus gemeinsame Auftritte/Konzert mit Hans-Malte Witte, Ken Norris, Christin Neddens, Andrea Marcelli, Arnd Geise, Marcia Bittencourt, Magro (Mathis Großman), Urs Johnen, Johan Leijonhufvud, Robin Draganiç, Regis Molina, David Millán, Sergio Medina, Yatziv Caspi, Rob Tyger uvm.</p>
+  <div class="album-card fade-in">
+    <a href="https://open.spotify.com/intl-de/album/4M0fErepqj1auMGj1kNIXC" target="_blank">
+      <img class="album-card__img" src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b6e1ea859a34dcd642adb381" alt="Caribe Pacifico" loading="lazy">
+      <h3>Caribe Pacifico</h3>
+      <p>Spotify öffnen</p>
+    </a>
+  </div>
+  <div class="album-card fade-in">
+    <a href="https://open.spotify.com/intl-de/album/0VF6hUuloZk3OhTCKhjm97" target="_blank">
+      <img class="album-card__img" src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021500424dd1aa69f3cb832dc9" alt="Jason Fabus (US)" loading="lazy">
+      <h3>Jason Fabus (US)</h3>
+      <p>Spotify öffnen</p>
+    </a>
+  </div>
+  <div class="album-card fade-in">
+    <a href="https://open.spotify.com/intl-de/album/7DYfnf4NgABpJeeGsCTJ0a" target="_blank">
+      <img class="album-card__img" src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026d44a1d1f41ef0d574a7d79a" alt="Matthew Liebeck Quartett" loading="lazy">
+      <h3>Matthew Liebeck Quartett</h3>
+      <p>Spotify öffnen</p>
+    </a>
+  </div>
+  </div>
+<p style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;line-height:1.7;color:#555;max-width:720px;margin:32px auto 0;text-align:center">darüber hinaus gemeinsame Auftritte/Konzert mit Hans-Malte Witte, Ken Norris, Christin Neddens, Andrea Marcelli, Arnd Geise, Marcia Bittencourt, Magro (Mathis Großman), Urs Johnen, Johan Leijonhufvud, Robin Draganiç,Regis Molina, David Millán, Sergio Medina, Yatziv Caspi, Rob Tyger uvm.</p>
 </section>
 <div class="divider"></div>
 <section class="section" id="film">
 <h2 class="section__heading fade-in">Filmmusik</h2>
-<div class="section__subline fade-in"></div>
 <div class="film__text fade-in">
 <p>Neben Konzerten bringe ich mich auch in die klangliche und musikalische Dimension von Filmen ein. Ich habe an der Klanggestaltung und Filmmusik-Komposition mitgewirkt u.a. bei den Filmen:</p>
 <img class="film-poster" src="https://www.filmportal.de/sites/default/files/image/2023-01/fn155490_pla_01.jpg" alt="Aus meiner Haut Filmplakat" loading="lazy">
@@ -274,7 +249,6 @@ img{display:block;max-width:100%}
 <div class="divider"></div>
 <section class="section" id="session">
 <h2 class="section__heading fade-in">Session Musiker</h2>
-<div class="section__subline fade-in"></div>
 <div class="session__text fade-in">
 <p>Mit meiner klassischen Ausbildung und dem Fokus auf Jazz/Lateinamerikanische Musik biete ich als Sessionmusiker maßgeschneiderte Unterstützung für dein nächstes Studioprojekt vor Ort oder Remote in meinem Berliner Musikstudio.</p>
 <a href="https://open.spotify.com/intl-de/track/2FYLsCrAI8oOmegaq4jhgk?si=ac8f871d314a4f84" target="_blank" class="session__track">
@@ -284,40 +258,49 @@ img{display:block;max-width:100%}
 </div>
 </section>
 <div class="divider"></div>
-<section class="section" id="newsletter">
+
+
+<!-- Newsletter Section -->
+<section class="section" id="newsletter" style="background-color: #f6f6f6; padding: 40px 24px 40px;">
 <style type="text/css">
-.ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}
-.g-recaptcha{transform:scale(1);-webkit-transform:scale(1);transform-origin:0 0;-webkit-transform-origin:0 0}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
-.ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#ffffff #ffffff #ffffff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}
-@keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-#mlb2-42585291.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}
-#mlb2-42585291.ml-form-embedContainer h4,#mlb2-42585291.ml-form-embedContainer p,#mlb2-42585291.ml-form-embedContainer span,#mlb2-42585291.ml-form-embedContainer button{text-transform:none!important;letter-spacing:normal!important}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper{background-color:transparent;border-width:1px;border-color:rgba(255,255,255,.08);border-radius:6px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:32px 24px 16px}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent{text-align:center;margin:0 0 24px 0}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#e8e6e3;font-family:'Playfair Display',serif!important;font-size:28px;font-weight:400;margin:0 0 8px 0;text-align:center;word-break:break-word}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:rgba(232,230,227,.55);font-family:'Inter',sans-serif!important;font-size:13px;font-weight:400;line-height:1.6;margin:0;text-align:center}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form{margin:0;width:100%}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent{margin:0 0 16px 0;width:100%}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0;width:100%}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item{margin:0}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#1a1a1a!important;color:#e8e6e3!important;border-color:rgba(255,255,255,.1)!important;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Inter',sans-serif!important;font-size:13px!important;height:auto;line-height:21px!important;margin:0;padding:12px 14px!important;width:100%!important;box-sizing:border-box!important;max-width:100%!important;transition:border-color .3s ease}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus{border-color:rgba(201,168,76,.5)!important;outline:none}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 16px 0;float:none;width:100%;text-align:center}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#c9a84c!important;border:none!important;border-radius:4px!important;box-shadow:none!important;color:#0a0a0a!important;cursor:pointer;font-family:'Inter',sans-serif!important;font-size:12px!important;font-weight:500!important;letter-spacing:.2em!important;text-transform:uppercase!important;line-height:21px!important;height:auto;padding:12px 20px!important;width:100%!important;box-sizing:border-box!important;transition:background .3s ease}
-#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#dbbd5a!important}
-.ml-error input{border-color:#c0392b!important}
-.ml-error .label-description,.ml-error label:first-child{color:#c0392b!important}
-.dsgvo-note{font-size:10px;color:rgba(232,230,227,.25);margin-top:8px;text-align:center;font-family:'Inter',sans-serif;line-height:1.5}
+.ml-form-embedSubmitLoad { display: inline-block; width: 20px; height: 20px; }
+.g-recaptcha { transform: scale(1); -webkit-transform: scale(1); transform-origin: 0 0; -webkit-transform-origin: 0 0; height: ; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+.ml-form-embedSubmitLoad:after { content: " "; display: block; width: 11px; height: 11px; margin: 1px; border-radius: 50%; border: 4px solid #fff; border-color: #ffffff #ffffff #ffffff transparent; animation: ml-form-embedSubmitLoad 1.2s linear infinite; }
+@keyframes ml-form-embedSubmitLoad { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+#mlb2-42585291.ml-form-embedContainer { box-sizing: border-box; display: table; margin: 0 auto; position: static; width: 100% !important; }
+#mlb2-42585291.ml-form-embedContainer h4, #mlb2-42585291.ml-form-embedContainer p, #mlb2-42585291.ml-form-embedContainer span, #mlb2-42585291.ml-form-embedContainer button { text-transform: none !important; letter-spacing: normal !important; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper { background-color: #f6f6f6; border-width: 0px; border-color: transparent; border-radius: 4px; border-style: solid; box-sizing: border-box; display: inline-block !important; margin: 0; padding: 0; position: relative; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody, #mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody { padding: 20px 20px 0 20px; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent, #mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent { text-align: center; margin: 0 0 20px 0; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4, #mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 { color: #000000; font-family: 'Montserrat', sans-serif; font-size: 30px; font-weight: 400; margin: 0 0 10px 0; text-align: center; word-break: break-word; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p, #mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p { color: #000000; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; line-height: 20px; margin: 0 0 10px 0; text-align: center; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form { margin: 0; width: 100%; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent { margin: 0 0 20px 0; width: 100%; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow { margin: 0 0 10px 0; width: 100%; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item { margin: 0; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input { background-color: #ffffff !important; color: #333333 !important; border-color: #cccccc; border-radius: 4px !important; border-style: solid !important; border-width: 1px !important; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px !important; height: auto; line-height: 21px !important; margin-bottom: 0; margin-top: 0; margin-left: 0; margin-right: 0; padding: 10px 10px !important; width: 100% !important; box-sizing: border-box !important; max-width: 100% !important; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit { margin: 0 0 20px 0; float: none; width: 100%; text-align: center; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button { background-color: #000000 !important; border: none !important; border-radius: 4px !important; box-shadow: none !important; color: #ffffff !important; cursor: pointer; font-family: 'Montserrat', sans-serif !important; font-size: 14px !important; font-weight: 700 !important; line-height: 21px !important; height: auto; padding: 10px !important; width: 100% !important; box-sizing: border-box !important; }
+#mlb2-42585291.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background-color: #333333 !important; }
+.ml-error input { border-color: red!important; }
+.ml-error .label-description, .ml-error label:first-child { color: #ff0000 !important; }
+/* DSGVO Hinweis */
+.dsgvo-note {
+font-size: 11px;
+color: #666;
+margin-top: 10px;
+text-align: center;
+font-family: sans-serif;
+    }
 </style>
-<div style="max-width:480px;margin:0 auto">
+<div style="max-width:500px;margin:0 auto">
 <div id="mlb2-42585291" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42585291">
-<div class="ml-form-align-center">
+<div class="ml-form-align-center ">
 <div class="ml-form-embedWrapper embedForm">
 <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-<div class="ml-form-embedContent">
-<h4>Kein Konzert verpassen</h4>
+<div class="ml-form-embedContent" style=" ">
+<h4>Kein Konzert verpassen!</h4>
 <p>Nur die wichtigsten Termine – max. 1x im Monat, versprochen.</p>
 </div>
 <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2443229/forms/190255228356921058/subscribe" data-code="" method="post" target="_blank">
@@ -331,16 +314,17 @@ img{display:block;max-width:100%}
 <input type="hidden" name="ml-submit" value="1">
 <div class="ml-form-embedSubmit">
 <button type="submit" class="primary">Jetzt anmelden</button>
-<button disabled="disabled" style="display:none" type="button" class="loading">
+<button disabled="disabled" style="display: none;" type="button" class="loading">
 <div class="ml-form-embedSubmitLoad"></div>
 <span class="sr-only">Loading...</span>
 </button>
 </div>
+<!-- DSGVO Hinweistext -->
 <p class="dsgvo-note">Mit dem Absenden erklären Sie sich damit einverstanden, dass wir Ihre E-Mail-Adresse an den Newsletter-Dienstleister MailerLite weitergeben. Sie können Ihre Einwilligung jederzeit widerrufen. Weitere Informationen finden Sie in unserer Datenschutzerklärung. Es erfolgt ein Double-Opt-In Verfahren.</p>
 <input type="hidden" name="anticsrf" value="true">
 </form>
 </div>
-<div class="ml-form-successBody row-success" style="display:none">
+<div class="ml-form-successBody row-success" style="display: none">
 <div class="ml-form-successContent">
 <h4>Thank you!</h4>
 <p>You have successfully joined our subscriber list.</p>
@@ -358,7 +342,6 @@ fetch("https://assets.mailerlite.com/jsonp/2443229/forms/190255228356921058/take
 <div class="divider"></div>
 <section class="section" id="contact">
 <h2 class="section__heading fade-in">Kontakt</h2>
-<div class="section__subline fade-in"></div>
 <div class="contact-grid">
 <div class="contact-block fade-in">
 <p class="contact-block__label">Kontakt</p>
@@ -381,38 +364,64 @@ fetch("https://assets.mailerlite.com/jsonp/2443229/forms/190255228356921058/take
 </a>
 </div>
 </section>
+
+
+<!-- Dezente Legal Section (Accordion) -->
 <div class="divider"></div>
-<section class="section" id="legal" style="padding:24px 24px 16px">
-<div class="legal-wrapper">
-<button class="legal-accordion" onclick="toggleAccordion(this)">Impressum / Datenschutz</button>
-<div class="legal-content">
-<p><strong>1. Verantwortlicher</strong><br>Felix Mross<br>Stechlinstraße 3<br>10318 Berlin<br>E-Mail: berlinmusicbooking@gmx.de</p>
-<p><strong>2. Allgemeines zur Datenverarbeitung</strong><br>Diese Webseite ist eine rein informative, statische Webseite. Es werden keine Cookies gesetzt, keine Tracking- oder Analysedienste eingesetzt und keine Nutzerdaten aktiv erhoben.</p>
-<p><strong>3. Bereitstellung der Webseite und Erstellung von Logfiles</strong><br>Bei jedem Zugriff auf diese Webseite werden durch den Hosting-Anbieter automatisch Informationen in sogenannten Server-Logfiles erfasst, die Ihr Browser automatisch übermittelt. Diese sind: Browsertyp und -version, Verwendetes Betriebssystem, Referrer-URL (die zuvor besuchte Seite), IP-Adresse des zugreifenden Rechners, Datum und Uhrzeit der Serveranfrage. Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Webseitenbetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und Optimierung seiner Webseite – hierzu müssen die Server-Logfiles erfasst werden.</p>
-<p><strong>4. Kontaktaufnahme</strong><br>Wenn Sie per E-Mail oder Telefon Kontakt aufnehmen, werden die von Ihnen mitgeteilten Daten (z. B. Newsletter, Name, E-Mail-Adresse, Telefonnummer, Inhalt der Anfrage) zum Zweck der Bearbeitung Ihrer Anfrage gespeichert. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche bzw. vertragliche Maßnahmen) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-<p><strong>5. Externe Links</strong><br>Diese Webseite enthält Links zu externen Webseiten. Beim Anklicken dieser Links werden Sie auf Webseiten Dritter weitergeleitet, die eigene Datenschutzbestimmungen haben. Für die Einhaltung der Datenschutzvorschriften durch diese Drittanbieter wird keine Verantwortung übernommen.</p>
-<p><strong>6. Ihre Rechte als betroffene Person</strong><br>Sie haben gegenüber dem Verantwortlichen folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
-<p>Recht auf Auskunft (Art. 15 DSGVO)<br>Recht auf Berichtigung (Art. 16 DSGVO)<br>Recht auf Löschung (Art. 17 DSGVO)<br>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)<br>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)<br>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</p>
-<p>Darüber hinaus haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren (Art. 77 DSGVO).</p>
-<p><strong>7. Änderung dieser Datenschutzerklärung</strong><br>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Februar 2026. Durch die Weiterentwicklung der Webseite oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.</p>
-</div>
-<button class="legal-accordion" onclick="toggleAccordion(this)">Urheberrecht und Haftungsausschluss</button>
-<div class="legal-content">
-<p><strong>Haftungsausschluss</strong></p>
-<p><strong>Haftung für Inhalte</strong><br>Die Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Gemäß §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-<p><strong>Haftung für Links</strong><br>Diese Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße geprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.</p>
-<p><strong>Urheberrecht</strong><br>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
-</div>
-</div>
+<section class="section" id="legal" style="padding: 24px 24px 16px;">
+    <div class="legal-wrapper">
+
+        <button class="legal-accordion" onclick="toggleAccordion(this)">Impressum / Datenschutz</button>
+        <div class="legal-content">
+            <p><strong>1. Verantwortlicher</strong><br>Felix Mross<br>Stechlinstraße 3<br>10318 Berlin<br>E-Mail: berlinmusicbooking@gmx.de</p>
+
+            <p><strong>2. Allgemeines zur Datenverarbeitung</strong><br>Diese Webseite ist eine rein informative, statische Webseite. Es werden keine Cookies gesetzt, keine Tracking- oder Analysedienste eingesetzt und keine Nutzerdaten aktiv erhoben.</p>
+
+            <p><strong>3. Bereitstellung der Webseite und Erstellung von Logfiles</strong><br>Bei jedem Zugriff auf diese Webseite werden durch den Hosting-Anbieter automatisch Informationen in sogenannten Server-Logfiles erfasst, die Ihr Browser automatisch übermittelt. Diese sind: Browsertyp und -version, Verwendetes Betriebssystem, Referrer-URL (die zuvor besuchte Seite), IP-Adresse des zugreifenden Rechners, Datum und Uhrzeit der Serveranfrage. Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Webseitenbetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und Optimierung seiner Webseite – hierzu müssen die Server-Logfiles erfasst werden.</p>
+
+            <p><strong>4. Kontaktaufnahme</strong><br>Wenn Sie per E-Mail oder Telefon Kontakt aufnehmen, werden die von Ihnen mitgeteilten Daten (z. B. Newsletter, Name, E-Mail-Adresse, Telefonnummer, Inhalt der Anfrage) zum Zweck der Bearbeitung Ihrer Anfrage gespeichert. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche bzw. vertragliche Maßnahmen) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen). Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+            <p><strong>5. Externe Links</strong><br>Diese Webseite enthält Links zu externen Webseiten. Beim Anklicken dieser Links werden Sie auf Webseiten Dritter weitergeleitet, die eigene Datenschutzbestimmungen haben. Für die Einhaltung der Datenschutzvorschriften durch diese Drittanbieter wird keine Verantwortung übernommen.</p>
+
+            <p><strong>6. Ihre Rechte als betroffene Person</strong><br>Sie haben gegenüber dem Verantwortlichen folgende Rechte hinsichtlich Ihrer personenbezogenen Daten:</p>
+            <p>Recht auf Auskunft (Art. 15 DSGVO)<br>Recht auf Berichtigung (Art. 16 DSGVO)<br>Recht auf Löschung (Art. 17 DSGVO)<br>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)<br>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)<br>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</p>
+            <p>Darüber hinaus haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren (Art. 77 DSGVO).</p>
+
+            <p><strong>7. Änderung dieser Datenschutzerklärung</strong><br>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Februar 2026. Durch die Weiterentwicklung der Webseite oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen.</p>
+        </div>
+
+        <button class="legal-accordion" onclick="toggleAccordion(this)">Urheberrecht und Haftungsausschluss</button>
+        <div class="legal-content">
+            <p><strong>Haftungsausschluss</strong></p>
+            <p><strong>Haftung für Inhalte</strong><br>Die Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Gemäß §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+            <p><strong>Haftung für Links</strong><br>Diese Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße geprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.</p>
+            <p><strong>Urheberrecht</strong><br>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+        </div>
+
+    </div>
 </section>
+
+
 <footer class="footer">
-<p class="footer__credit">&copy; Felix Mross 2025</p>
+<p class="footer__credit">
+&copy; Felix Mross 2025
+</p>
 </footer>
 <script>
 var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el)});
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor){anchor.addEventListener('click',function(e){e.preventDefault();var target=document.querySelector(this.getAttribute('href'));if(target)target.scrollIntoView({behavior:'smooth',block:'start'})})});
-function toggleAccordion(button){var content=button.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null;button.classList.remove('active')}else{content.style.maxHeight=content.scrollHeight+"px";button.classList.add('active')}}
+
+// Accordion Functionality
+function toggleAccordion(button) {
+    var content = button.nextElementSibling;
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+}
+
 </script>
 </body>
 </html>
